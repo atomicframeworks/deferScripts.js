@@ -14,7 +14,7 @@ Include the source script in your html via a script block (A) OR via an external
 
 Using a script block will be faster because due to the fact it does not require a network request to fetch the file.
 
-##### A) Using a script block
+##### A) Including via script block
 
 ```js
 <script type="text/javascript">
@@ -28,7 +28,7 @@ Using a script block will be faster because due to the fact it does not require 
 </script>
 ```
 
-##### B) Using an external script file reference
+##### B) Including via external file reference
 
 ```js
 <script src="/src/deferScript.min.js" type="text/javascript"></script>
