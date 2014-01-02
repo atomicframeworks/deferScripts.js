@@ -15,7 +15,7 @@ A) Via a script block <br>
 -- OR -- <br> 
 B) Via an external script file reference
 
-Using a script block will be faster because due to the fact it does not require a network request to fetch the file.
+* Note: Using a script block will be faster because due to the fact it does not require a network request to fetch the file.
 
 ##### A) Including via script block
 
