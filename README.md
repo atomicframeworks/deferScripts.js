@@ -38,18 +38,24 @@ Using a script block will be faster because due to the fact it does not require 
 
 Defer any scripts not necessary for page load or that are not actually used by the document before the onload event. <br>
 <br>
-You can pass an array of script file references or a string file reference.
+You can pass an array of script file references or a string file reference. <br>
+<br>
+The script's src can be either a relative URL or an external URL such as a file on a CDN.
 
 ```html
 <script type="text/javascript">
+    // External CDN hosted script
+    deferScripts('//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js');
+
     // Array of scripts
-    deferScripts(['someScript.js','anotherScript.js']);
+    deferScripts(['someScript.js', 'anotherScript.js']);
     
     // Single script
     deferScripts('index.js');
+    
 </script>
 ```
 
 ## License 
-deferScripts.js is released under the MIT license <br>
+deferScripts.js is released under the MIT license. <br>
 [www.opensource.org/licenses/MIT](www.opensource.org/licenses/MIT)
