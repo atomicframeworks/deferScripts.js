@@ -36,7 +36,7 @@ Using a script block will be faster because due to the fact it does not require 
 
 ## Usage
 
-Defer any scripts not necessary for page load or that are not actually used by the document before the onload event. <br>
+Defer any scripts not necessary for page load, or any that are not actually used by the document before the onload event. <br>
 <br>
 You can pass an array of script file references or a string file reference. <br>
 <br>
