@@ -43,7 +43,10 @@ You can pass an array of script file references or a string file reference.
 
 ```html
 <script type="text/javascript">
+    // Array of scripts
     deferScripts(['someScript.js','anotherScript.js']);
+    
+    // Single script
     deferScripts('index.js');
 </script>
 ```
