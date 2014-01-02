@@ -2,7 +2,7 @@
 Properly defer your JavaScript files for increased performance! <br>
 
 ## Overview
-It is important to defer your JavaScript files if possible due to the fact that Google uses page speed and a ranking factor.  this speed is measured from the time the page is called to when the page is initially loaded.  Defering your JavaScript files reduces initial load time and will help improve your performance and rankings.
+It is important to defer your JavaScript files if possible due to the fact that Google uses page speed and a ranking factor.  This speed is measured from the time the page is called to when the page is initially loaded.  Defering your JavaScript files reduces initial load time and will help improve your performance and rankings.
 
 What is deferring? <br>
 <br>
@@ -13,9 +13,9 @@ What is deferring? <br>
 ## Installation
 Include the source script in your html via a script block (A) OR via an external script file reference (B). <br>
 
-Using a script block will be faster because it prevents a network request to fetch the file.
+Using a script block will be faster because due to the fact it does not require a network request to fetch the file.
 
-#### A - Using a script block
+##### A) Using a script block
 
 ```js
 <script type="text/javascript">
@@ -29,7 +29,7 @@ Using a script block will be faster because it prevents a network request to fet
 </script>
 ```
 
-#### B - Using an external script file reference
+##### B) Using an external script file reference
 
 ```js
 <script src="/src/deferScript.min.js" type="text/javascript"></script>
