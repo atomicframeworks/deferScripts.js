@@ -52,7 +52,6 @@ The script's src can be either a relative URL or an external URL such as a file 
     
     // Single script
     deferScripts('index.js');
-    
 </script>
 ```
 
