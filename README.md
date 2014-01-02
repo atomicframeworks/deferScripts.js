@@ -10,7 +10,10 @@ What is deferring? <br>
 
 
 ## Installation
-Include the source script in your html via a script block (A) OR via an external script file reference (B). <br>
+Include the source script in your html using one of two ways: <br>
+A) Via a script block <br>
+- OR - <br> 
+B) Via an external script file reference <br>
 
 Using a script block will be faster because due to the fact it does not require a network request to fetch the file.
 
