@@ -2,10 +2,13 @@
 Properly defer your JavaScript files for increased performance! <br>
 
 ## Overview
-"Deferring loading of JavaScript functions that are not called at startup reduces the initial download size, allowing other resources to be downloaded in parallel, and speeding up execution and rendering time."
+It is important to defer your JavaScript files if possible due to the fact that Google uses page speed and a ranking factor.  this speed is measured from the time the page is called to when the page is initially loaded.  Defering your JavaScript files reduces initial load time and will help improve your performance and rankings.
+
+What is deferring? <br>
+<br>
+"Deferring loading of JavaScript functions that are not called at startup reduces the initial download size, allowing other resources to be downloaded in parallel, and speeding up execution and rendering time." <br>
 -[Google](https://developers.google.com/speed/docs/best-practices/payload#DeferLoadingJS)
 
-It is important to defer your JavaScript files if possible due to the fact that Google uses page speed and a ranking factor.  this speed is measured from the time the page is called to when the page is initially loaded.  Defering your JavaScript files reduces initial load time and will help improve your performance and rankings.
 
 ## Installation
 Include the source script in your html via a script block (A) OR via an external script file reference (B). <br>
