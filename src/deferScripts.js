@@ -44,8 +44,10 @@ var deferScripts = function (scripts, synchronous) {
                 }
             }
         };
-    // Attach loadScripts to window load
-    if (window.addEventListener) {
+    // If window is loaded execute or attach loadScripts to window load
+    if (document.readyState === "complete"){
+        loadScripts();
+    } else if (window.addEventListener) {
         window.addEventListener('load', loadScripts, false);
     } else if (window.attachEvent) {
         window.attachEvent('onload', loadScripts);
