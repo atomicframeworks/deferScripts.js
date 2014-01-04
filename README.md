@@ -27,7 +27,8 @@ B) Via an external script file reference
          # _ #  ###        
         #   #  #            AtomicFrameworks
     
-    */var deferScripts=function(scriptArray){'use strict';var appendScript=function(src){var script=document.createElement('script');script.type='text/javascript';script.src=src;document.body.appendChild(script);},loadScripts=function(){var i,l;if(scriptArray instanceof Array){for(i=0,l=scriptArray.length;i<l;i+=1){appendScript(scriptArray[i]);}}else if(typeof scriptArray==='string'){appendScript(scriptArray);}};if(window.addEventListener){window.addEventListener('load',loadScripts,false);}else if(window.attachEvent){window.attachEvent('onload',loadScripts);}else{window.onload=loadScripts;}};
+    */
+    var deferScripts=function(t,e){"use strict";var n=function(t,e){var n=document.createElement("script");n.type="text/javascript",n.src=t,e&&(n.onreadystatechange=function(){"complete"===this.readyState&&e()},n.onload=e),document.body.appendChild(n)},a=0,o=function(){var i,d;if("string"==typeof t)n(t);else if(e)a<t.length-1?(n(t[a],o),a+=1):n(t[a]);else if(t instanceof Array)for(i=0,d=t.length;d>i;i+=1)n(t[i])};window.addEventListener?window.addEventListener("load",o,!1):window.attachEvent?window.attachEvent("onload",o):window.onload=o};
 </script>
 ```
 
@@ -43,7 +44,9 @@ Defer any scripts not necessary for page load, or any that are not actually used
 <br>
 You can pass an array of script file references or a string file reference. <br>
 <br>
-The script's src can be either a relative URL or an external URL such as a file on a CDN.
+The script's src can be either a relative URL or an external URL such as a file on a CDN. <br>
+<br>
+When scripts are added dynamically they are loaded asynchronously meaning that they may not always load in order. To load require scripts to load synchronously pass true as the second argument to the deferScripts() call.
 
 ```html
 <script type="text/javascript">
@@ -55,6 +58,12 @@ The script's src can be either a relative URL or an external URL such as a file 
     
     // Single script
     deferScripts('index.js');
+    
+    // Require scripts to load synchronously (in order) by passing true as the second argument
+    deferScripts([
+        '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
+        'requiresPreviousScript.js'
+    ], true);
 </script>
 ```
 
