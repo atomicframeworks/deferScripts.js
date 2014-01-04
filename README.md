@@ -47,7 +47,7 @@ deferScripts.js accepts either an array of script file references or a string fi
 <br>
 The script's src can be either a relative URL or an external URL such as a file on a CDN. <br>
 <br>
-When scripts are added dynamically they are loaded asynchronously meaning that they may not always load in order. To load require scripts to load synchronously pass true as the second argument to the deferScripts() call.
+When scripts are added dynamically they are loaded asynchronously meaning that they may not always load in order. To require scripts to load synchronously pass true as the second argument to the deferScripts() call.
 
 ```html
 <script type="text/javascript">
