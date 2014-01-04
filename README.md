@@ -11,6 +11,7 @@ What is deferring? <br>
 
 ## Installation
 Include the source script in your html using one of two ways: <br>
+<br>
 A) Via a script block <br>
 -- OR -- <br> 
 B) Via an external script file reference
