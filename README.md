@@ -42,7 +42,7 @@ B) Via an external script file reference
 
 Defer any scripts not necessary for page load, or any that are not actually used by the document before the onload event. <br>
 <br>
-You can pass an array of script file references or a string file reference. <br>
+deferScripts.js accepts either an array of script file references or a string file reference. <br>
 <br>
 The script's src can be either a relative URL or an external URL such as a file on a CDN. <br>
 <br>
