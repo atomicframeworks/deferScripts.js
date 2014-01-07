@@ -36,7 +36,7 @@ B) Via an external script file reference
 ##### B) Including via external file reference
 
 ```js
-<script src="/src/deferScript.min.js" type="text/javascript"></script>
+<script src="/src/deferScripts.min.js" type="text/javascript"></script>
 ```
 
 ## Usage
