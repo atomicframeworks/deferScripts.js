@@ -29,7 +29,7 @@ B) Via an external script file reference
         #   #  #            AtomicFrameworks
     
     */
-    var deferScripts=function(t,e){"use strict";var n=function(t,e){var n=document.createElement("script");n.type="text/javascript",n.src=t,e&&(n.onreadystatechange=function(){"complete"===this.readyState&&e()},n.onload=e),document.body.appendChild(n)},a=0,o=function(){var d,i;if("string"==typeof t)n(t);else if(e)a<t.length-1?(n(t[a],o),a+=1):n(t[a]);else if(t instanceof Array)for(d=0,i=t.length;i>d;d+=1)n(t[d])};"complete"===document.readyState?o():window.addEventListener?window.addEventListener("load",o,!1):window.attachEvent?window.attachEvent("onload",o):window.onload=o};
+    var deferScripts=function(t,e){"use strict";var n=function(t,n){var a=document.createElement("script");a.type="text/javascript",a.src=t,e||(a.async=!0),n&&(a.onreadystatechange=function(){"complete"===this.readyState&&n()},a.onload=n),document.body.appendChild(a)},a=0,o=function(){var d,i;if("string"==typeof t)n(t);else if(e)a<t.length-1?(n(t[a],o),a+=1):n(t[a]);else if(t instanceof Array)for(d=0,i=t.length;i>d;d+=1)n(t[d])};"complete"===document.readyState?o():window.addEventListener?window.addEventListener("load",o,!1):window.attachEvent?window.attachEvent("onload",o):window.onload=o};
 </script>
 ```
 

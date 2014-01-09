@@ -12,6 +12,9 @@ var deferScripts = function (scripts, synchronous) {
         var script = document.createElement('script');
         script.type = 'text/javascript';
         script.src = src;
+        if (!synchronous) {
+            script.async = true;
+        }
         if (callback) {
             // IE
             script.onreadystatechange = function () {
@@ -45,7 +48,7 @@ var deferScripts = function (scripts, synchronous) {
             }
         };
     // If window is loaded execute or attach loadScripts to window load
-    if (document.readyState === "complete"){
+    if (document.readyState === "complete") {
         loadScripts();
     } else if (window.addEventListener) {
         window.addEventListener('load', loadScripts, false);
